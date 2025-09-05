@@ -1,0 +1,19 @@
+# Binaries
+dnsresolver
+main.exe
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Output files
+*.pdf
+
+# OS-specific
+.DS_Store
+Thumbs.db
