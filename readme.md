@@ -1,23 +1,46 @@
-# Grading
+# DNS Resolver
 
-Add an `X` in the `GRD` column for each criteria you'd like me to grade.
+This project is a simple **DNS Resolver** implemented in **Go**.  
+It demonstrates how DNS queries are built, sent over UDP, and how responses are parsed to resolve domain names.
 
-| GRD | Points | ID          | Test Criteria                                                                                 |
-| --- | -----: | ----------- | --------------------------------------------------------------------------------------------- |
-|  x   |     20 | A_RECORD    | Print the IPv4 address of each site if it exists                                              |
-|  x  |      5 | AAAA_RECORD | Print the IPv6 address of each site if it exists                                              |
-|  x  |      5 | NS_RECORD   | Print the domain name and IP address of an NS of each site                                    |
-|  x   |      5 | CNAME       | If the given name is a CNAME, resolves the IPv4 of the canonical name. If not, prints nothing |
-| x    |      5 | TXT         | When a TXT record is requested, return a random number in the given range                     |
-|  x   |      5 | CACHING     | Cache all response records for as long as the TTL specifies and serve back cached records     |
+## Project Structure
 
+DNS_Resolver/
+├── main.go             # Entry point of the program
+├── dnsresolver.go      # Core logic for DNS message creation and parsing
+├── udpclient.go        # UDP client implementation for sending/receiving queries
+├── go.mod              # Go module definition
+├── go.sum              # Dependency checksums
 
-# Submission Agreement
+> ⚠️ Compiled binaries (`dnsresolver`, `main.exe`) and PDFs should be excluded from version control.
 
-By submitting this code, I guarantee that I fully understand both the what
-and the why of the code and that my code _will not_ be distributed to other
-university students or _publicly_ posted on a code sharing website (ex. Github). 
+## Getting Started
 
-# Notes
+### Prerequisites
+- Go 1.18+ (or any recent version)
 
-- Feel free to add any extra notes here (especially on the structure of your program)
+### Clone the Repository
+git clone https://github.com/your-username/DNS_Resolver.git  
+cd DNS_Resolver
+
+### Run the Project
+go run main.go
+
+### Build Executable
+go build -o dnsresolver main.go  
+./dnsresolver
+
+## Implementation Details
+- Constructs DNS queries manually.  
+- Sends requests via UDP sockets.  
+- Receives and parses DNS responses.  
+- Demonstrates networking and protocol-level programming in Go.
+
+## Notes
+Ignore compiled binaries and PDFs when committing:  
+- dnsresolver  
+- main.exe  
+
+## License
+This project is for educational purposes.  
+You are free to modify and use it for learning.
