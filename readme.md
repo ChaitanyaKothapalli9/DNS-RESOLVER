@@ -6,11 +6,11 @@ It demonstrates how DNS queries are built, sent over UDP, and how responses are 
 ## Project Structure
 
 DNS_Resolver/
-main.go             # Entry point of the program
-dnsresolver.go      # Core logic for DNS message creation and parsing
-udpclient.go        # UDP client implementation for sending/receiving queries
-go.mod              # Go module definition
-go.sum              # Dependency checksums
+├── main.go # Entry point of the program
+├── dnsresolver.go # Core logic for DNS message creation and parsing
+├── udpclient.go # UDP client implementation for sending/receiving queries
+├── go.mod # Go module definition
+├── go.sum # Dependency checksums
 
 > ⚠️ Compiled binaries (`dnsresolver`, `main.exe`) and PDFs should be excluded from version control.
 
